@@ -35,9 +35,9 @@ class Router
     getRoute: (dir, file, path) ->
         filename=false
         
-        if file.substr 0,file.length-3, file.length is '.js'
+        if (file.substr file.length-3, file.length) is '.js'
             filename = file.substr(0,file.length-3)
-        else if file.substr 0,file.length-7, file.length is '.coffee'
+        else if (file.substr file.length-7, file.length) is '.coffee'
             filename = file.substr(0,file.length-7)
         
         if filename
