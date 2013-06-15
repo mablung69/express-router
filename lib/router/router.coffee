@@ -65,8 +65,10 @@ class Router
             
     setRoute: (type, routes, callback) ->
         if typeof callback is 'function' and routes.length > 0
-            console.log "bound type '#{type}' to #{routes}"    
-            @app[type](routes,callback)
+            console.log "bound type '#{type}' to #{routes}"
+            str=routes.join('|')
+            str.replace /[\-\[\]\/\{\}\(\)\+\?\.\\\^\$]/g, "\\$&"
+            @app[type](str,callback)
 
 module.exports = (app, path) ->
     router = new Router app, path
