@@ -21,7 +21,9 @@ class Router
                 if fs.existsSync file
                     routes=["#{path}/*"]
                     routes.push path if path isnt ''
-                    @app.all routes, require file
+                    str=routes.join('|')
+                    str.replace /[\-\[\]\/\{\}\(\)\+\?\.\\\^\$]/g, "\\$&"
+                    @app.all str, require file
             
             for file in files
                 if file not in ["_.js","_.coffee"] and not (path is '' and file in ["index.coffee","index.js"])                    
