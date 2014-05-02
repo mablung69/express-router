@@ -12,7 +12,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/ghostnumber7/express-router/LICENSE"
+      "url": "https://github.com/mablung69/express-router/LICENSE"
     }
   ],
   "engines": {
@@ -22,10 +22,10 @@
     "lib": "./lib/router"
   },
   "main": "./lib/router/router.js",
-  "bugs": "https://github.com/ghostnumber7/express-router/issues",
+  "bugs": "https://github.com/mablung69/express-router/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ghostnumber7/express-router.git"
+    "url": "git://github.com/mablung69/express-router.git"
   },
   "devDependencies": {
     "coffee-script": "*"
